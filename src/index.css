@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  /* Векторные стили для печати документов ГОСТ в PDF (Vector High-DPI) */
+  @media print {
+    body {
+      background: white !important;
+      color: black !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    /* Скрываем все служебные элементы интерфейса при печати */
+    header,
+    nav,
+    aside,
+    button,
+    .no-print,
+    .dashboard-header,
+    .dashboard-sidebar,
+    .step-navigator,
+    .action-toolbar {
+      display: none !important;
+    }
+
+    /* Растягивание документа и векторная отрисовка без растрирования */
+    .printable-document {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border: none !important;
+      box-shadow: none !important;
+      page-break-after: avoid !important;
+    }
+
+    svg {
+      shape-rendering: geometricPrecision !important;
+      text-rendering: geometricPrecision !important;
+      image-rendering: optimizeQuality !important;
+    }
+  }
+}
+

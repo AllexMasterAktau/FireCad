@@ -1,0 +1,6 @@
+{
+  "name": "ИБС | Автоматика Пожарная (САПР АПС и СОУЭ)",
+  "description": "Единая интеллектуальная среда проектирования систем пожарной автоматики (АПС и СОУЭ) по нормам Республики Казахстан",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
